@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.SpotFinder" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorPrimaryContainer">#C9A20D</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <item name="colorSecondary">#E6BE00</item>
+        <item name="colorTertiary">#B8860B</item>
+
+        <item name="android:colorBackground">#000000</item>
+        <item name="colorSurface">#121212</item>
+        <item name="colorSurfaceVariant">#1E1E1E</item>
+        <item name="colorOnSurface">#FFD700</item>
+
+        <item name="android:textColor">#FFD700</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+
+        <item name="colorOutline">#FFD700</item>
+        <item name="colorControlNormal">#FFD700</item>
+        <item name="colorControlActivated">#FFD700</item>
+    </style>
+</resources>

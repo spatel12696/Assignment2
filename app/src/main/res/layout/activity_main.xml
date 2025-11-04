@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🧭 Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingVertical="8dp"
+        android:background="#000000">
+
+        <!-- Location Icon -->
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_map_marker_alt_24"
+            android:layout_marginEnd="8dp" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpotFinder"
+            android:textColor="#FFD700"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- 🔍 Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search location..."
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="#FFD700"
+        app:hintTextColor="@color/gold_hint"
+        app:boxStrokeColor="@color/gold_outline"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/addressAuto"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="#FFD700"
+            android:textColorHint="#FFD700"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:completionThreshold="1"
+            android:singleLine="true"
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:popupBackground="#1E1E1E" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ⚙️ Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnManage"
+            style="@style/GoldButton"
+            android:text="Manage (Add/Update/Delete)"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearch"
+            style="@style/GoldButton"
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <!-- 🗺️ Google Map Fragment -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp" />
+
+    <!-- 📍 Coordinates Display -->
+    <TextView
+        android:id="@+id/tvLatLng"
+        android:text=""
+        android:textColor="#FFD700"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:background="#1E1E1E"
+        android:gravity="center" />
+
+</LinearLayout>

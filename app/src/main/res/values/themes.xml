@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌙 Main SpotFinder Theme -->
+    <style name="Theme.SpotFinder" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- 🎨 Primary Gold Accents -->
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorPrimaryContainer">#E6BE00</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <!-- 🖤 Background & Surface -->
+        <item name="android:colorBackground">#000000</item>
+        <item name="colorSurface">#121212</item>
+        <item name="colorSurfaceVariant">#1E1E1E</item>
+        <item name="colorOnSurface">#FFD700</item>
+
+        <!-- ✨ Secondary / Tertiary -->
+        <item name="colorSecondary">#C9A20D</item>
+        <item name="colorTertiary">#B8860B</item>
+
+        <!-- 🧭 Toolbar / System Bars -->
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+
+        <!-- 🟡 Icons & Borders -->
+        <item name="colorOutline">#FFD700</item>
+        <item name="colorControlNormal">#FFD700</item>
+        <item name="colorControlActivated">#FFD700</item>
+
+        <!-- 💬 Text -->
+        <item name="android:textColor">#FFD700</item>
+
+        <!-- ✨ Use custom gold button style -->
+        <item name="materialButtonStyle">@style/GoldButton</item>
+    </style>
+
+    <!-- 💎 Custom Gold Button -->
+    <style name="GoldButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">#000000</item> <!-- Black text -->
+        <item name="backgroundTint">#FFD700</item>   <!-- Gold background -->
+        <item name="rippleColor">#E6BE00</item>     <!-- Lighter gold ripple -->
+        <item name="cornerRadius">20dp</item>       <!-- Rounded corners -->
+        <item name="android:elevation">4dp</item>   <!-- Soft shadow -->
+    </style>
+
+    <style name="GoldToolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">#000000</item>
+        <item name="android:titleTextColor">#FFD700</item>
+        <item name="navigationIconTint">#FFD700</item>
+        <item name="android:colorControlHighlight">@color/gold_ripple</item>
+    </style>
+
+</resources>
